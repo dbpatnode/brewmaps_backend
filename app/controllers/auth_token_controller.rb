@@ -10,7 +10,7 @@ class AuthTokenController < ApplicationController
         render json: { error: "Password invalid." }, status: 401
         end
         auth_token = self.issue_token(@user)
-        render json: { auth_token: auth_token, user: @user }
+        render json: { auth_token: auth_token, user: UserSerializer.new(@user) }
     end
 
     def show
