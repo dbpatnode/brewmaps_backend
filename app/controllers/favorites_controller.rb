@@ -1,11 +1,12 @@
 class FavoritesController < ApplicationController
+    skip_before_action :authorize_action, only: [:index, :show, :destroy]
+    
     def index
         favorites = Favorite.all 
         render json: favorites
     end
 
     def create 
-        # byebug
         favorite = Favorite.create(favorite_params)
         render json: favorite
         
@@ -23,6 +24,7 @@ class FavoritesController < ApplicationController
     # end
 
     def destroy 
+        # byebug
         favorite = Favorite.find(params[:id])
         favorite.destroy
         render json:{message: "favorite has been deleted"}
