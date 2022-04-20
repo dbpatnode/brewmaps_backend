@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby version
+  2.7.1
 
-Things you may want to cover:
+- System dependencies, in terminal run:
+  `gem install`
+  `gem install bundler`
 
-* Ruby version
+- Configuration
 
-* System dependencies
+- Database creation:
+  Built with postgreSQL: https://www.postgresql.org/download/
 
-* Configuration
+  once downloaded run in terminal:
+  `psql`
 
-* Database creation
+  then:
+  `create database brewmaps_backend_development;`
 
-* Database initialization
+  check to see if database created:
+  `\l`
 
-* How to run the test suite
+  quit out of psql session run:
+  `\q`
 
-* Services (job queues, cache servers, search engines, etc.)
+- Database initialization, in terminal run
+  `rake db:migrate`
+  `rake db:seed`
+  `rails s`
 
-* Deployment instructions
+- Deployment instructions
 
-* ...
+- ...

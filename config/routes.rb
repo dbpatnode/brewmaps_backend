@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/logged_in', to: "sessions#logged_in"
   resources :sessions
   resources :registrations, only: [:create, :index]
-  root to: "static#home"
+  root to: "breweries#index"
   resources :notes
   resources :favorites
   resources :breweries
