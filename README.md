@@ -27,8 +27,9 @@
 - Database initialization, in terminal run
   `rake db:migrate`
   `rake db:seed`
+
+- if database already seeded and migrated, in terminal run:
   `rails s`
 
 - Deployment instructions
-
-- ...
+  `coming soon...`
