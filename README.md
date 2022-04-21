@@ -32,6 +32,10 @@
   `rails s`
 
 - Deployment instructions
+  for more information on deployment steps check out:
+  https://devcenter.heroku.com/articles/getting-started-with-rails6
+
+  but generally speaking this will get ya goin:
 
   1. Commit code and push to heroku
      `git add .`
