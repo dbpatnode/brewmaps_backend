@@ -1,61 +1,68 @@
 # README
 
-- Ruby version
-  2.7.1
+## Ruby version
 
-- System dependencies, in terminal run:
-  `gem install`
-  `gem install bundler`
+2.7.1
 
-- Configuration
+## System dependencies, in terminal run:
 
-- Database creation:
-  Built with postgreSQL: https://www.postgresql.org/download/
+`gem install` <br/>
+`gem install bundler`
 
-  once downloaded run in terminal:
-  `psql`
+# Configuration
 
-  then:
-  `create database brewmaps_backend_development;`
+## Database creation:
 
-  check to see if database created:
-  `\l`
+Built with postgreSQL: https://www.postgresql.org/download/
 
-  quit out of psql session run:
-  `\q`
+once downloaded run in terminal:<br/>
+`psql`
 
-- Database initialization (local), in terminal run
-  `rake db:migrate`
-  `rake db:seed`
+then:<br/>
+`create database brewmaps_backend_development;`
 
-- if database already seeded and migrated, in terminal run:
-  `rails s`
+check to see if database created:<br/>
+`\l`
 
-- Deployment instructions
-  for more information on deployment steps check out:
-  https://devcenter.heroku.com/articles/getting-started-with-rails6
+quit out of psql session run:<br/>
+`\q`
 
-  but generally speaking this will get ya goin:
+## Database initialization (local), in terminal run
 
-  1. Commit code and push to heroku
-     `git add .`
-     `git commit -m "<deployment message here>"`
-     `git push heroku master`
+`rake db:migrate`<br/>
+`rake db:seed`
 
-  2. To Migrate/Seed Database after deployment:
-     migrate
-     `heroku run rake db:migrate`
+## Bootup local, in terminal run:
 
-  seed
-  `heroku run rake db:seed`
+`rails s`<br/>
 
-  3. create web dyno:
-     `heroku ps:scale web=1`
+# Deployment instructions
 
-  4. check out deployment:
-     `heroku open`
+for more information on deployment steps check out:<br/>
+https://devcenter.heroku.com/articles/getting-started-with-rails6
 
-- For Deployment debugging and checking logs run
-  `heroku logs`
-  OR
-  `heroku logs --tail`
+but generally speaking this will get ya goin:
+
+1. Commit code and push to heroku<br/>
+   `git add .`<br/>
+   `git commit -m "<deployment message here>"`<br/>
+   `git push heroku master`
+
+2. To Migrate/Seed Database after deployment:<br/>
+   migrate<br/>
+   `heroku run rake db:migrate`<br/>
+
+seed<br/>
+`heroku run rake db:seed`<br/>
+
+3. create web dyno:<br/>
+   `heroku ps:scale web=1`<br/>
+
+4. check out deployment:<br/>
+   `heroku open`<br/>
+
+## For Deployment debugging and checking logs run
+
+`heroku logs`<br/>
+OR<br/>
+`heroku logs --tail`<br/>
