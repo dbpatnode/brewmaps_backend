@@ -10,7 +10,9 @@ class UsersController < ApplicationController
             
             @user = User.create(user_params)
             # byebug
-            render json: @user
+            auth_token = self.issue_token(@user)
+            render json: { auth_token: auth_token, user: @user }
+            # render json: @user
         end 
     
         # def login
@@ -23,6 +25,10 @@ class UsersController < ApplicationController
         #     end 
             
         # end 
+
+        def issue_token(user)
+            JWT.encode({ user_id: user.id}, ENV['SECRET'], ENV['ALG'])
+        end
     
         private 
         def user_params
